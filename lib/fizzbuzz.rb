@@ -1,11 +1,9 @@
+def divisible_by?(n,x)
+  n % x ==0 ? true : false
+end
+
 def fizzbuzz(n)
-	if n% 15 == 0
-		"FizzBuzz"
-	elsif	n%3 == 0
-		"Fizz"
-	elsif n%5 == 0
-		"Buzz"
-	else 
-		n	
-	end
+	f = "Fizz" if divisible_by?(n,3) 
+	b = "Buzz" if divisible_by?(n,5) 
+	f || b ? "#{f}#{b}" : n
 end
